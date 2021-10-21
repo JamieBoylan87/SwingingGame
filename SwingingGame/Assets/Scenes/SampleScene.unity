@@ -291,6 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restingAngle: 0
   force: 1500
+  playerController: {fileID: 0}
 --- !u!255 &28866004
 FixedJoint2D:
   m_ObjectHideFlags: 0
@@ -342,10 +343,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   origin: {fileID: 1557638089}
   mat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  stayTime: 0.5
+  stayTime: 1.49
   lineWidth: 0.1
   speed: 75.87
-  pullForce: 15
+  pullForce: 1
 --- !u!50 &104963933
 Rigidbody2D:
   serializedVersion: 4
@@ -1582,6 +1583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restingAngle: 0
   force: 750
+  playerController: {fileID: 0}
 --- !u!1 &739255677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,8 +1688,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739255677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.04, y: 9, z: 0}
-  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_LocalPosition: {x: 22.9849, y: 8.6329, z: 0}
+  m_LocalScale: {x: 3.89, y: 1.7341, z: 1}
   m_Children:
   - {fileID: 1244027707}
   m_Father: {fileID: 0}
@@ -2366,6 +2368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restingAngle: 0
   force: 750
+  playerController: {fileID: 0}
 --- !u!1 &1388090798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2537,6 +2540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restingAngle: 0
   force: 750
+  playerController: {fileID: 0}
 --- !u!1 &1408407394
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,6 +2702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restingAngle: 0
   force: 375
+  playerController: {fileID: 0}
 --- !u!1 &1520064819
 GameObject:
   m_ObjectHideFlags: 0
@@ -2869,6 +2874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restingAngle: 0
   force: 750
+  playerController: {fileID: 0}
 --- !u!1 &1557638085
 GameObject:
   m_ObjectHideFlags: 0
@@ -3385,6 +3391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restingAngle: 0
   force: 750
+  playerController: {fileID: 0}
 --- !u!1 &2035219938
 GameObject:
   m_ObjectHideFlags: 0
@@ -3578,7 +3585,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 4
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1

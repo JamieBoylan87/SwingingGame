@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //Movement speed
     public float movementForce;
+    //Jump height
     public float jumpForce;
     [Space(5)]
+    //Distance to check for platform beneath player (Higher number means you can basically fly)
     [Range(0, 100f)] public float raycastDistance = 1.5f;
     private Rigidbody2D rb;
     public LayerMask whatIsGround;
@@ -27,10 +30,12 @@ public class PlayerController : MonoBehaviour
 
     private void Movement()
     {
+        //If you are on the ground, move
         if (IsGrounded())
         {
             float xDir = Input.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(xDir * (movementForce * Time.deltaTime), rb.velocity.y);
+            //Animation code
             if (xDir != 0)
             {
                 head.localScale = new Vector3(xDir, 1f, 1f);
@@ -55,6 +60,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
+        //Jump
         if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W))
         {
             if (IsGrounded())
@@ -64,8 +70,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
+        //If you are grounded return true
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastDistance, whatIsGround);
         return hit.collider != null;
     }

@@ -10,12 +10,12 @@ public class RopeSetter : MonoBehaviour
     {
             
     }
-
-    // Update is called once per frame
     void Update()
     {
+        //If you are hosting left mouse button and press Q, swing.
         if (Input.GetKeyDown(KeyCode.Q) && (Input.GetMouseButton(0)))
         {
+            //Gets world position of mouse
             Vector2 worldPos = Camera.main .ScreenToWorldPoint(Input.mousePosition);
             rope[index].setStart(worldPos);
             index++;

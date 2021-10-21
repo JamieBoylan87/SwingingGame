@@ -6,6 +6,7 @@ public class Balance : MonoBehaviour
 {
     public float restingAngle = 0f;
     public float force = 750f;
+    public PlayerController playerController;
 
     private Rigidbody2D rb;
 
@@ -13,9 +14,9 @@ public class Balance : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
     private void FixedUpdate()
     {
+        //Always be upgright
         rb.MoveRotation(Mathf.LerpAngle(rb.rotation, restingAngle, force * Time.deltaTime));
     }
 }
