@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     public Transform head;
 
+    //Door Opening
+    public GameObject[] gameObjects;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -75,5 +78,27 @@ public class PlayerController : MonoBehaviour
         //If you are grounded return true
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastDistance, whatIsGround);
         return hit.collider != null;
+    }
+
+    //Code to destroy key and door pulled from spongy
+    void DestroyKey()
+    {
+        gameObjects = GameObject.FindGameObjectsWithTag("Key");
+        for (var i = 0; i < gameObjects.Length; i++)
+            Destroy(gameObjects[i]);
+    }
+    void OpenDoor()
+    {
+        gameObjects = GameObject.FindGameObjectsWithTag("Door");
+        for (var i = 0; i < gameObjects.Length; i++)
+            Destroy(gameObjects[i]);
+    }
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Key")
+        {
+            DestroyKey();
+            OpenDoor();
+        }
     }
 }
