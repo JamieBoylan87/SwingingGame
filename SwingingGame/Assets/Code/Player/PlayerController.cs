@@ -80,25 +80,9 @@ public class PlayerController : MonoBehaviour
         return hit.collider != null;
     }
 
-    //Code to destroy key and door pulled from spongy
-    void DestroyKey()
+    public void Death()
     {
-        gameObjects = GameObject.FindGameObjectsWithTag("Key");
-        for (var i = 0; i < gameObjects.Length; i++)
-            Destroy(gameObjects[i]);
+        this.enabled = false;
     }
-    void OpenDoor()
-    {
-        gameObjects = GameObject.FindGameObjectsWithTag("Door");
-        for (var i = 0; i < gameObjects.Length; i++)
-            Destroy(gameObjects[i]);
-    }
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.name == "Key")
-        {
-            DestroyKey();
-            OpenDoor();
-        }
-    }
+
 }

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Rope
   - NoRope
+  - Key
+  - Door
   layers:
   - Default
   - TransparentFX

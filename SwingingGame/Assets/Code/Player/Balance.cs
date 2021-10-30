@@ -19,4 +19,9 @@ public class Balance : MonoBehaviour
         //Always be upgright
         rb.MoveRotation(Mathf.LerpAngle(rb.rotation, restingAngle, force * Time.deltaTime));
     }
+
+    public void Death()
+    {
+        this.enabled = false;
+    }
 }
