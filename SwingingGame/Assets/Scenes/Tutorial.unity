@@ -1361,7 +1361,7 @@ MonoBehaviour:
   stayTime: 1.49
   lineWidth: 0.1
   speed: 75.87
-  pullForce: 1.5
+  pullForce: 4
 --- !u!50 &1578863974
 Rigidbody2D:
   serializedVersion: 4
