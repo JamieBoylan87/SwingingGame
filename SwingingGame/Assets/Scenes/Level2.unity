@@ -51597,6 +51597,10 @@ PrefabInstance:
       value: 1201650951
       objectReference: {fileID: 0}
     - target: {fileID: 5658899564660757743, guid: b3ef1d8ac2818224c93e429e7970db49, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658899564660757743, guid: b3ef1d8ac2818224c93e429e7970db49, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 4294967295
       objectReference: {fileID: 0}
