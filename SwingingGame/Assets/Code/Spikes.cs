@@ -9,7 +9,6 @@ public class Spikes : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Destroy(other.gameObject);
-            Time.timeScale = 0.5f;
         }
     }
 }
