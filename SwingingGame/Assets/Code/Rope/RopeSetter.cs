@@ -26,4 +26,9 @@ public class RopeSetter : MonoBehaviour
         }
 
     }
+
+    public void Death()
+    {
+        this.enabled = false;
+    }
 }

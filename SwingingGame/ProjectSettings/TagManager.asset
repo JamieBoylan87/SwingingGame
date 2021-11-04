@@ -8,6 +8,8 @@ TagManager:
   - NoRope
   - Key
   - Door
+  - Collider
+  - GameMaster
   layers:
   - Default
   - TransparentFX

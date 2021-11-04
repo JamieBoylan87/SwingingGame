@@ -12,10 +12,12 @@ public class PlayerController : MonoBehaviour
     //Distance to check for platform beneath player (Higher number means you can basically fly)
     [Range(0, 100f)] public float raycastDistance = 1.5f;
     private Rigidbody2D rb;
+    public float xDir;
     public LayerMask whatIsGround;
 
     public Animator anim;
     public Transform head;
+    public GameObject keyGUI;
 
     //Door Opening
     public GameObject[] gameObjects;
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        keyGUI.gameObject.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -31,12 +34,13 @@ public class PlayerController : MonoBehaviour
         Jump();
     }
 
+
     private void Movement()
     {
         //If you are on the ground, move
         if (IsGrounded())
         {
-            float xDir = Input.GetAxisRaw("Horizontal");
+            xDir = Input.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(xDir * (movementForce * Time.deltaTime), rb.velocity.y);
             //Animation code
             if (xDir != 0)
@@ -84,5 +88,6 @@ public class PlayerController : MonoBehaviour
     {
         this.enabled = false;
     }
+
 
 }
