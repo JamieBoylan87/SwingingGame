@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spikes : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class Spikes : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Destroy(other.gameObject);
+        }
+        if (other.gameObject.name == "Head")
+        {
+            SceneManager.LoadScene("Game Over 3");
         }
     }
 }

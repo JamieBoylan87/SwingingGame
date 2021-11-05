@@ -30,7 +30,7 @@ public class KeyDoor : MonoBehaviour
                 gm.InputText.text = ("[E] to Enter");
                 if (Input.GetKey("e"))
                 {
-                    SceneManager.LoadScene(LevelToLoad);
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
                 }
             }
         }
@@ -44,7 +44,8 @@ public class KeyDoor : MonoBehaviour
             {
                 if (Input.GetKey("e"))
                 {
-                    SceneManager.LoadScene(LevelToLoad);
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+
                 }
             }
         }
