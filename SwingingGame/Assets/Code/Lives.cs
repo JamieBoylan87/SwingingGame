@@ -44,7 +44,6 @@ public class Lives : MonoBehaviour
                 heart2.gameObject.SetActive(false);
                 heart3.gameObject.SetActive(false);
                 GameOver.gameOver();
-                Time.timeScale = 0;
                 break;
 
 

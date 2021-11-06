@@ -6,6 +6,7 @@ public class Key : MonoBehaviour
 {
     public bool key = false;
     public bool open = false;
+    public AudioSource pickup;
     public GameObject keyGUI;
     void Start()
     {
@@ -28,6 +29,7 @@ public class Key : MonoBehaviour
             GameObject.Find("Key").transform.localScale = new Vector3(0, 0, 0);
             key = true;
             Open();
+            pickup.Play();
         }
     }
 

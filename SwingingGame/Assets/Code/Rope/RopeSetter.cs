@@ -5,7 +5,7 @@ using UnityEngine;
 public class RopeSetter : MonoBehaviour
 {
     public Rope[] rope;
-    private int index = 0; 
+    private int index = 0;
     void Start()
     {
             
@@ -18,11 +18,14 @@ public class RopeSetter : MonoBehaviour
             //Gets world position of mouse
             Vector2 worldPos = Camera.main .ScreenToWorldPoint(Input.mousePosition);
             rope[index].setStart(worldPos);
+            
             index++;
             if (index > rope.Length - 1)
             {
+
                 index = 0;
             }
+            
         }
 
     }

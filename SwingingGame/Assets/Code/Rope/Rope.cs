@@ -6,6 +6,10 @@ public class Rope : MonoBehaviour
 {
     //Origin (arm)
     public Rigidbody2D origin;
+    public AudioSource thwip;
+    public AudioSource connect;
+
+
     //Material of rope
     public Material mat;
     //Renders Line
@@ -41,6 +45,14 @@ public class Rope : MonoBehaviour
     public void setStart(Vector2 targetPos)
     {
         //Creates a vector in direction of mouse
+        if (!thwip.isPlaying)
+        {
+            thwip.Play();
+        }
+        else
+        {
+            thwip.Stop();
+        }
         Vector2 dir = targetPos - origin.position;
         dir = dir.normalized;
         velocity = dir * speed;  
@@ -105,6 +117,8 @@ public class Rope : MonoBehaviour
             pull = true;
             timer = reset(stayTime);
             StartCoroutine(timer);
+            connect.Play();
+
         }
         else
         {

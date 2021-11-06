@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //Movement particles
+    public ParticleSystem dust1;
+    public ParticleSystem dust;
+    public AudioSource foot;
+
     //Movement speed
     public float movementForce;
     //Jump height
@@ -40,28 +45,55 @@ public class PlayerController : MonoBehaviour
         //If you are on the ground, move
         if (IsGrounded())
         {
+
             xDir = Input.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(xDir * (movementForce * Time.deltaTime), rb.velocity.y);
             //Animation code
             if (xDir != 0)
             {
                 head.localScale = new Vector3(xDir, 1f, 1f);
+                CreateDust();
             }
             if (xDir > 0)
             {
                 anim.SetBool("Walk", true);
                 anim.SetBool("WalkLeft", false);
+                CreateDust();
+                
+
             }
             if (xDir < 0)
             {
                 anim.SetBool("Walk", false);
                 anim.SetBool("WalkLeft", true);
+                CreateDust();
+
+
             }
             if (xDir == 0)
             {
                 anim.SetBool("Walk", false);
                 anim.SetBool("WalkLeft", false);
             }
+
+            if (xDir <0 || xDir >0)
+            {
+                if (!foot.isPlaying)
+                {
+                    foot.Play();
+                }
+                
+            }
+            else
+            {
+
+                    foot.Stop();
+            }
+        }
+        else
+        {
+            foot.Stop();
+
         }
     }
 
@@ -73,6 +105,7 @@ public class PlayerController : MonoBehaviour
             if (IsGrounded())
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
+                CreateDust();
             }
         }
     }
@@ -89,5 +122,12 @@ public class PlayerController : MonoBehaviour
         this.enabled = false;
     }
 
+    void CreateDust()
+    {
+        dust.Play();
+        dust1.Play();
+        
+
+    }
 
 }

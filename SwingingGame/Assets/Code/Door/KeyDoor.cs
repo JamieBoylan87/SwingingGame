@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class KeyDoor : MonoBehaviour
 {
@@ -10,11 +11,18 @@ public class KeyDoor : MonoBehaviour
     private Key key;
     public bool keyCheck = false;
     private GameMaster gm;
+    public GameObject EndScreen;
+    public Text scoreText;
+    private ScoreManager sm;
 
     private void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
+        sm = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoreManager>();
+
         key = Key.GetComponent<Key>();
+        EndScreen.gameObject.SetActive(false);
+
     }
 
     private void Update()
@@ -31,7 +39,9 @@ public class KeyDoor : MonoBehaviour
                 gm.InputText.text = ("[E] to Enter");
                 if (Input.GetKey("e"))
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+                    Time.timeScale = 0f;
+                    scoreText.text = sm.score.ToString();
+                    EndScreen.gameObject.SetActive(true);
                 }
             }
         }
@@ -45,8 +55,10 @@ public class KeyDoor : MonoBehaviour
             {
                 if (Input.GetKey("e"))
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+                    Time.timeScale = 0f;
+                    scoreText.text = sm.score.ToString();
 
+                    EndScreen.gameObject.SetActive(true);
                 }
             }
         }
