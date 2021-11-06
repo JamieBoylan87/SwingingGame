@@ -5,14 +5,35 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void NextLevel ()
+    [SerializeField] RectTransform fader;
+
+    private void Start()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        fader.gameObject.SetActive(true);
+        LeanTween.scale(fader, new Vector3(1, 1, 1), 0);
+        LeanTween.scale(fader, Vector3.zero, 0.5f).setOnComplete(() =>
+        {
+            fader.gameObject.SetActive(false);
+        });
+    }
+    public void NextLevel()
+    {
+        fader.gameObject.SetActive(true);
+        LeanTween.scale(fader, Vector3.zero, 0f);
+        LeanTween.scale(fader, new Vector3(1, 1, 1), 0.5f).setOnComplete(() =>
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        });
     }
 
     public void Previous()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        fader.gameObject.SetActive(true);
+        LeanTween.scale(fader, Vector3.zero, 0f);
+        LeanTween.scale(fader, new Vector3(1, 1, 1), 0.5f).setOnComplete(() =>
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        });
     }
 
     public void Quit()
@@ -23,16 +44,31 @@ public class MainMenu : MonoBehaviour
 
     public void ToTutorial()
     {
-        SceneManager.LoadScene("Tutorial");
+        fader.gameObject.SetActive(true);
+        LeanTween.scale(fader, Vector3.zero, 0f);
+        LeanTween.scale(fader, new Vector3(1, 1, 1), 0.5f).setOnComplete(() =>
+        {
+            SceneManager.LoadScene("Tutorial");
+        });
     }
 
     public void ToMainMenu()
     {
-        SceneManager.LoadScene("Main Menu");
+        fader.gameObject.SetActive(true);
+        LeanTween.scale(fader, Vector3.zero, 0f);
+        LeanTween.scale(fader, new Vector3(1, 1, 1), 0.5f).setOnComplete(() =>
+        {
+            SceneManager.LoadScene(0);
+        });
     }
 
     public void Controls()
     {
-        SceneManager.LoadScene("Controls");
+        fader.gameObject.SetActive(true);
+        LeanTween.scale(fader, Vector3.zero, 0f);
+        LeanTween.scale(fader, new Vector3(1, 1, 1), 0.5f).setOnComplete(() =>
+        {
+            SceneManager.LoadScene("Controls");
+        });
     }
 }
