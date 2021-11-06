@@ -14385,7 +14385,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458249826}
   m_LocalRotation: {x: 0, y: 0, z: 0.7815204, w: 0.6238797}
-  m_LocalPosition: {x: 331.01, y: 39.01, z: 10}
+  m_LocalPosition: {x: 331.18, y: 37.65, z: 10}
   m_LocalScale: {x: 17.20418, y: 0.6470344, z: 1}
   m_Children: []
   m_Father: {fileID: 1659026036}
@@ -75980,6 +75980,7 @@ GameObject:
   - component: {fileID: 1552915097}
   - component: {fileID: 1552915096}
   - component: {fileID: 1552915098}
+  - component: {fileID: 1552915099}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -76152,6 +76153,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1552915099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552915095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43f0988df514434c8f194822712fd7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1554201050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76812,7 +76825,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562685742}
   m_LocalRotation: {x: -0, y: -0, z: 0.12533319, w: 0.9921148}
-  m_LocalPosition: {x: 305.0191, y: 35.1101, z: 0}
+  m_LocalPosition: {x: 305.49, y: 33.17, z: 0}
   m_LocalScale: {x: 2.3360322, y: 2.4973364, z: 1}
   m_Children: []
   m_Father: {fileID: 2108406936}
@@ -77250,7 +77263,7 @@ MonoBehaviour:
   stayTime: 1
   lineWidth: 0.1
   speed: 75
-  pullForce: 10
+  pullForce: 15
 --- !u!50 &1578863974
 Rigidbody2D:
   serializedVersion: 4
@@ -81330,11 +81343,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 389591492591112863, guid: 63c8f00e4e6dc234f85e3258a2bb154b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.32
+      value: 19.59
       objectReference: {fileID: 0}
     - target: {fileID: 389591492591112863, guid: 63c8f00e4e6dc234f85e3258a2bb154b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.25
+      value: -4.87
       objectReference: {fileID: 0}
     - target: {fileID: 389591492591112863, guid: 63c8f00e4e6dc234f85e3258a2bb154b, type: 3}
       propertyPath: m_LocalPosition.z

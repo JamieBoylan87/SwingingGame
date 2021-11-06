@@ -13,7 +13,7 @@ public class Spikes : MonoBehaviour
         }
         if (other.gameObject.name == "Head")
         {
-            SceneManager.LoadScene("Game Over 3");
+            GameOver.gameOver();
         }
     }
 }

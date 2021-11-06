@@ -12,17 +12,17 @@ public class RestartLevel : MonoBehaviour
 
     public void Play1()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level1");
     }
 
     public void Play2()
     {
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene("Level2");
     }
 
     public void Play3()
     {
-        SceneManager.LoadScene("Level 3");
+        SceneManager.LoadScene("Level3");
     }
 
     public void Quit()
