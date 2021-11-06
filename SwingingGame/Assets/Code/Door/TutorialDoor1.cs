@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class KeyDoor : MonoBehaviour
+public class TutorialDoor1 : MonoBehaviour
 {
     public int LevelToLoad;
     public GameObject Key;
@@ -31,7 +31,7 @@ public class KeyDoor : MonoBehaviour
                 gm.InputText.text = ("[E] to Enter");
                 if (Input.GetKey("e"))
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+                    SceneManager.LoadScene("Main Menu");
                 }
             }
         }
@@ -45,7 +45,7 @@ public class KeyDoor : MonoBehaviour
             {
                 if (Input.GetKey("e"))
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+                    SceneManager.LoadScene("Main Menu");
 
                 }
             }

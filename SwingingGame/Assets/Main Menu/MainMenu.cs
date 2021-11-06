@@ -26,10 +26,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Tutorial");
     }
 
-    public void Start()
+    public void ToMainMenu()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Main Menu");
     }
+
     public void Controls()
     {
         SceneManager.LoadScene("Controls");
