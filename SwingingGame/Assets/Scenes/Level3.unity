@@ -29508,6 +29508,10 @@ PrefabInstance:
       propertyPath: keyGUI
       value: 
       objectReference: {fileID: 1573302233}
+    - target: {fileID: 1484292332434018567, guid: 27026a6071c4bb7448ad065419bd934a, type: 3}
+      propertyPath: jumpForce
+      value: 1200
+      objectReference: {fileID: 0}
     - target: {fileID: 1484292332781966369, guid: 27026a6071c4bb7448ad065419bd934a, type: 3}
       propertyPath: cam
       value: 
