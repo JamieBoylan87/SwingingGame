@@ -25,6 +25,11 @@ public class RestartLevel : MonoBehaviour
         SceneManager.LoadScene("Level3");
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
     public void Quit()
     {
         Debug.Log("Quit");

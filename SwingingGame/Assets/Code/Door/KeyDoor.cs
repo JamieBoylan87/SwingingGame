@@ -57,7 +57,6 @@ public class KeyDoor : MonoBehaviour
                 {
                     Time.timeScale = 0f;
                     scoreText.text = sm.score.ToString();
-
                     EndScreen.gameObject.SetActive(true);
                 }
             }
@@ -68,8 +67,7 @@ public class KeyDoor : MonoBehaviour
     {
         if (key.open)
         {
-                gm.InputText.text = ("");
-
+            gm.InputText.text = ("");
         }
     }
 }

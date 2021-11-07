@@ -27,8 +27,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Over 3.unity
     guid: c3eaefb1f292c404285feefb88e1c9ee
   - enabled: 1
-    path: Assets/Scenes/Test Level.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Game Complete.unity
+    guid: 118063ebfc7b3d1429d272a5591e313f
   - enabled: 1
     path: Assets/Scenes/Controls.unity
     guid: b1ffc7c25a655e3458ccff7d7426bbf5
