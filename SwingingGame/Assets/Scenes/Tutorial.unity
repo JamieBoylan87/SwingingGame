@@ -4969,7 +4969,7 @@ PrefabInstance:
     - target: {fileID: 1484292332376709532, guid: 27026a6071c4bb7448ad065419bd934a, type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1818150423}
     - target: {fileID: 1484292332376709533, guid: 27026a6071c4bb7448ad065419bd934a, type: 3}
       propertyPath: m_Color.b
       value: 0.5377358
@@ -5029,7 +5029,7 @@ PrefabInstance:
     - target: {fileID: 1484292332781966369, guid: 27026a6071c4bb7448ad065419bd934a, type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1818150423}
     - target: {fileID: 1484292332781966374, guid: 27026a6071c4bb7448ad065419bd934a, type: 3}
       propertyPath: m_Color.b
       value: 0.5377358
@@ -5053,7 +5053,7 @@ PrefabInstance:
     - target: {fileID: 1484292332945854722, guid: 27026a6071c4bb7448ad065419bd934a, type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1818150423}
     - target: {fileID: 1484292332945854723, guid: 27026a6071c4bb7448ad065419bd934a, type: 3}
       propertyPath: m_Color.b
       value: 0.5377358
@@ -5277,7 +5277,7 @@ PrefabInstance:
     - target: {fileID: 1484292333967970078, guid: 27026a6071c4bb7448ad065419bd934a, type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1818150423}
     - target: {fileID: 1484292333967970079, guid: 27026a6071c4bb7448ad065419bd934a, type: 3}
       propertyPath: m_Color.b
       value: 0.5377358
@@ -32540,7 +32540,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 246550265}
+  highscoreText: {fileID: 0}
   score: 0
+  highscore: 100
 --- !u!114 &1351995496
 MonoBehaviour:
   m_ObjectHideFlags: 0

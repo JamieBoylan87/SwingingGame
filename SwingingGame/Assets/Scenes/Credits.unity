@@ -296,7 +296,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 90, y: -1129}
-  m_SizeDelta: {x: 252.2248, y: 1268.2568}
+  m_SizeDelta: {x: 410.8, y: 1268.2568}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &517432048
 MonoBehaviour:
@@ -332,8 +332,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Game Created by\n\n   Dylan Boylan\n   Jamie Boylan\n   Danny Hewitt\n  
-    Aisling Murray\n\n Sprites found on\n\nUnity Asset Store\n     And Itch.io\n\n         
-    Music\n\nSuperFunnySheet\n      Steve Syz\n      \n"
+    Aisling Murray\n\n Sprites found on:\n\nUnity Asset Store\n     And Itch.io\n\n         
+    Music:\n\n atmosbasement -\n       qubodup\n\n     Slow Stride -\n       isiah658\n\nExploring
+    a Cave -\nMega Pixel Music\n\n         Forest -\n Brandon Morris\n\n        Besaild
+    -\n         Tozan\n\nSuperFunnySheet -\n      Steve Syz\n      \n"
 --- !u!222 &517432049
 CanvasRenderer:
   m_ObjectHideFlags: 0

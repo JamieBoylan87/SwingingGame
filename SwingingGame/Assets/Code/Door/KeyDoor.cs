@@ -14,11 +14,16 @@ public class KeyDoor : MonoBehaviour
     public GameObject EndScreen;
     public Text scoreText;
     private ScoreManager sm;
+    private ScoreManager1 sm1;
+    private ScoreManager2 sm2;
 
     private void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
         sm = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoreManager>();
+        sm1 = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoreManager1>();
+        sm2 = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoreManager2>();
+
 
         key = Key.GetComponent<Key>();
         EndScreen.gameObject.SetActive(false);
@@ -40,8 +45,25 @@ public class KeyDoor : MonoBehaviour
                 if (Input.GetKey("e"))
                 {
                     Time.timeScale = 0f;
-                    scoreText.text = sm.score.ToString();
                     EndScreen.gameObject.SetActive(true);
+                    if ("Level1" == SceneManager.GetActiveScene().name)
+                    {
+                        sm.checkHighscore();
+                        scoreText.text = sm.score.ToString();
+
+                    }
+                    else if ("Level2" == SceneManager.GetActiveScene().name)
+                    {
+                        sm1.checkHighscore();
+                        scoreText.text = sm1.score.ToString();
+
+                    }
+                    else if ("Level3" == SceneManager.GetActiveScene().name)
+                    {
+                        sm2.checkHighscore();
+                        scoreText.text = sm2.score.ToString();
+
+                    }
                 }
             }
         }
@@ -56,8 +78,24 @@ public class KeyDoor : MonoBehaviour
                 if (Input.GetKey("e"))
                 {
                     Time.timeScale = 0f;
-                    scoreText.text = sm.score.ToString();
                     EndScreen.gameObject.SetActive(true);
+                    if ("Level1" == SceneManager.GetActiveScene().name)
+                    {
+                        sm.checkHighscore();
+                        scoreText.text = sm.score.ToString();
+                    }
+                    else if ("Level2" == SceneManager.GetActiveScene().name)
+                    {
+                        sm1.checkHighscore();
+                        scoreText.text = sm1.score.ToString();
+
+                    }
+                    else if ("Level3" == SceneManager.GetActiveScene().name)
+                    {
+                        sm2.checkHighscore();
+                        scoreText.text = sm2.score.ToString();
+
+                    }
                 }
             }
         }

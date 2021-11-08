@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreManager : MonoBehaviour
+public class ScoreManager1 : MonoBehaviour
 {
-    public static ScoreManager instance;
+    public static ScoreManager1 instance;
     private int timer;
     public Text scoreText;
     public Text highscoreText;
 
     public int score = 0;
-    public int highscore = 100;
+    public int highscore1 = 100;
     private void Awake()
     {
         instance = this;
     }
     void Start()
     {
-        highscore = PlayerPrefs.GetInt("highscore", 0);
+        highscore1 = PlayerPrefs.GetInt("highscore1", 0);
         scoreText.text = score.ToString() + " SECONDS";
-        highscoreText.text = "FASTEST: " + highscore.ToString();
+        highscoreText.text = "FASTEST: " + highscore1.ToString();
         InvokeRepeating("AddPoint", 1, 1);
     }
 
@@ -32,9 +32,9 @@ public class ScoreManager : MonoBehaviour
 
     public void checkHighscore()
     {
-        if ((highscore > score) || (highscore == 0))
+        if ((highscore1 > score) || (highscore1 == 0))
         {
-            PlayerPrefs.SetInt("highscore", score);
+            PlayerPrefs.SetInt("highscore1", score);
         }
     }
 }
